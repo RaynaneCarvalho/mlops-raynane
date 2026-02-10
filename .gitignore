@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# artefatos locais
+.pytest_cache/
+mlruns/
+.streamlit/secrets.toml

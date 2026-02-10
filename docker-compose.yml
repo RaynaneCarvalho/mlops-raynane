@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    container_name: streamlit_app
+    ports:
+      - "8501:8501"
+    environment:
+      # Por padrão, o app carrega o modelo local (joblib) e NÃO depende do MLflow.
+      USE_MLFLOW_MODEL: "false"
+      MODEL_PATH: models/diamond_price_model.joblib
+
+      # Se você quiser testar o carregamento via MLflow, ative:
+      # USE_MLFLOW_MODEL: "true"
+      # MLFLOW_TRACKING_URI: http://host.docker.internal:5000
+      # MLFLOW_MODEL_URI: models:/diamonds_price_model@champion
