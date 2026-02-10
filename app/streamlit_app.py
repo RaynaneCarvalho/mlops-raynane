@@ -15,6 +15,12 @@ import joblib
 import pandas as pd
 import streamlit as st
 
+# ✅ Config da página deve ficar no topo (antes de qualquer st.*)
+st.set_page_config(
+    page_title="Diamonds • MLOps",
+    page_icon="💎",
+    initial_sidebar_state="expanded",
+)
 
 APP_AUTHOR = "Raynane Camillo Carvalho"
 APP_TAGLINE = "MLOps — Impacta | Projeto individual"
@@ -150,7 +156,6 @@ def build_input_form() -> pd.DataFrame:
 
 
 def main() -> None:
-    st.set_page_config(page_title="Diamonds • MLOps", page_icon="💎")
     _inject_css()
 
     # Sidebar (assinatura)
