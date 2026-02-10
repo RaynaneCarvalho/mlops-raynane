@@ -7,3 +7,5 @@ __pycache__/
 .pytest_cache/
 mlruns/
 .streamlit/secrets.toml
+models/ 
+mlruns/ 
